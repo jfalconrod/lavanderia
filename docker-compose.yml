@@ -1,0 +1,9 @@
+version: '2'
+services:
+  prueba:
+    build: .
+    command: nginx -g 'daemon off;'
+    volumes:
+      - .:/var/www/html/
+    ports:
+      - 8080:80
