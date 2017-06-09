@@ -2,7 +2,7 @@ version: '2'
 services:
   prueba:
     build: .
-    command: nginx -g 'daemon off;'
+    command: bash -c "/etc/init.d/php5-fpm start && nginx -g 'daemon off;'"
     volumes:
       - .:/var/www/html/
     ports:
