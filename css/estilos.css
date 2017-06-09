@@ -1,0 +1,22 @@
+body,html{
+  background-color: yellow;
+  height: 100%;
+}
+.container,.row,.col-md-12{
+  /*background-color: blue;*/
+  height: 100% !important;
+}
+table{
+  position: relative;
+  /*background-color: red;*/
+  height: 90% !important;
+}
+td{
+  vertical-align: middle !important;
+}
+#numeroCliente{
+  font-size: 150px;
+}
+#nombreCliente{
+  font-size: 170px;
+}
