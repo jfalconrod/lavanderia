@@ -1,9 +1,21 @@
 version: '2'
 services:
-  prueba:
+  web:
     build: .
     command: bash -c "/etc/init.d/php5-fpm start && nginx -g 'daemon off;'"
     volumes:
       - .:/var/www/html/
     ports:
       - 8080:80
+    links:
+      - mysql
+  mysql:
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: "lavanderia"
+      MYSQL_USER: "lavanderia"
+      MYSQL_PASSWORD: "lavanderia"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
