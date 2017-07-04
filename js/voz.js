@@ -22,6 +22,7 @@ $(function(){
       var msg = new SpeechSynthesisUtterance();
       var voices = window.speechSynthesis.getVoices();
       msg.voice = voices[$('#voices').val()];
+      console.log(msg.voice);
       msg.rate = $('#rate').val() / 10;
       msg.pitch = $('#pitch').val();
       msg.text = text;

@@ -18,7 +18,7 @@
           <tr>
             <td>
               <h1 id="numeroCliente">00</h1>
-              <h1 id="nombreCliente">Parque Paraiso 2</h1>
+              <h1 id="nombreCliente">Introduce Cliente</h1>
               <?php
                 require_once('mostrarCliente.php');
               ?>
